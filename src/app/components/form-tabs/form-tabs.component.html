@@ -1,0 +1,52 @@
+<div class="main-container">
+
+    <div class="main-tab">
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" (selectedTabChange)="onTabChange($event)">
+            <mat-tab label="Form A">
+                <app-dynamic-form [formSchema]="formA" (formDetails)="receivedFormDetails($event)"></app-dynamic-form>
+                <ng-container *ngIf="data.formADetails.length">
+                    <div class="main-table">
+                        <table border="1" cellpadding="10">
+                            <thead>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>Subscribe</th>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of data.formADetails">
+                                    <td>{{item.fullName}}</td>
+                                    <td>{{item.email}}</td>
+                                    <td>{{item.subscribe}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </ng-container>
+            </mat-tab>
+            <mat-tab label="Form B">
+                <app-dynamic-form [formSchema]="formB" (formDetails)="receivedFormDetails($event)"></app-dynamic-form>
+                <ng-container *ngIf="data.formBDetails.length">
+                    <div  class="main-table">
+                        <table border="1" cellpadding="10">
+                            <thead>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>Subscribe</th>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of data.formBDetails">
+                                    <td>{{item.username}}</td>
+                                    <td>{{item.password}}</td>
+                                    <td>{{item.remember}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </ng-container>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>
+
+
+

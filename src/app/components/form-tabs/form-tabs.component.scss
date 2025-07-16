@@ -1,0 +1,29 @@
+
+.main-container {
+ padding: 24px;
+    .main-tab {
+        display: flex;
+        justify-content: center;
+    }
+    .main-table {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+::ng-deep {
+    .mat-mdc-form-field {
+        width: 340px;
+    }
+    .mat-mdc-tab-body-content {
+        height: 100%;
+        overflow: hidden !important;
+    }
+    .mat-mdc-tab-labels { 
+        justify-content: center;
+    }
+    .mat-input-container {
+        margin-bottom: 1rem;
+    }
+}
